@@ -52,7 +52,5 @@ var server = http.createServer(function(request, response) {
     serveStatic(response, cache, absPath);
     });
 
-server.listen(3000, function() 
-{console.log("Serwer nasłuchuje na porcie 3000.");
-        });
+    server.listen(process.env.PORT || 3000);
 
